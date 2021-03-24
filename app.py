@@ -17,10 +17,13 @@ def index():
 def getData():
     if request.method=="POST":
         data = request.form['searchtext']
-        datasearch = wiki.page(str(data)).content
-        NerData = ner_Obj(datasearch)
-        result = displacy.render(NerData,style='ent')
-    return render_template('result.html',rawtext= datasearch,result = result)
+        try:
+            datasearch = wiki.page(str(data)).content
+            NerData = ner_Obj(datasearch)
+            result = displacy.render(NerData,style='ent')
+            return render_template('result.html',rawtext= datasearch,result = result)
+        except:
+            return render_template('index.html')
 
 
 if __name__ == "__main__":
