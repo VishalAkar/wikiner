@@ -11,4 +11,4 @@ wikipedia
 
 #process to use
 Just type the word which you want to search on wikipedia like 'facebook' ,'london' etc and the app will display information embeded with NER
-if for some keywords no page was found it will return an error,go back to previous page and type another word.
+if for some keywords no page was found, it will reload and you can try another word.
