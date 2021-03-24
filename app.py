@@ -1,4 +1,3 @@
-from numpy.lib.twodim_base import triu_indices
 import wikipedia as wiki
 import spacy 
 from flask import Flask, render_template,url_for,request
